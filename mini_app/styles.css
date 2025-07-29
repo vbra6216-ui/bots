@@ -1333,7 +1333,7 @@ body {
 } 
 
 /* Burger Menu */
-/* --- Красивое центральное модальное меню --- */
+/* --- Центрированное компактное модальное меню --- */
 .burger-menu {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -1344,31 +1344,30 @@ body {
     z-index: 1000;
     transition: opacity 0.2s;
 }
-/* --- Компактное красивое центральное меню --- */
 .burger-menu-content {
     background: #232347;
-    border-radius: 20px;
+    border-radius: 18px;
     box-shadow: 0 8px 48px 0 rgba(123, 97, 255, 0.18);
-    padding: 22px 18px 18px 18px;
-    min-width: 260px;
-    max-width: 380px;
-    min-height: 320px;
-    max-height: 80vh;
+    padding: 18px 16px 16px 16px;
+    width: 380px;
+    height: 420px;
+    max-width: 95vw;
+    max-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
 }
 .burger-menu-header {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 }
 .burger-menu-header h3 {
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     font-weight: 800;
     margin: 0;
     letter-spacing: 1px;
@@ -1377,10 +1376,10 @@ body {
     background: none;
     border: none;
     color: #a18aff;
-    font-size: 2.2rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: color 0.2s;
-    margin-left: 18px;
+    margin-left: 10px;
 }
 .burger-menu-close:hover {
     color: #fff;
@@ -1388,28 +1387,28 @@ body {
 .burger-menu-items {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 12px;
     width: 100%;
 }
 .burger-menu-item {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
     background: #29295a;
     color: #fff;
-    border-radius: 14px;
-    padding: 18px 20px;
-    font-size: 1.18rem;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 1.08rem;
     font-weight: 600;
     text-decoration: none;
     box-shadow: 0 2px 12px 0 rgba(123, 97, 255, 0.10);
     transition: background 0.18s, color 0.18s, box-shadow 0.18s;
 }
 .burger-menu-item svg {
-    min-width: 22px;
-    min-height: 22px;
-    max-width: 22px;
-    max-height: 22px;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 20px;
+    max-height: 20px;
 }
 .burger-menu-item:hover {
     background: #7B61FF;
@@ -1417,17 +1416,20 @@ body {
     box-shadow: 0 4px 24px 0 rgba(123, 97, 255, 0.18);
 }
 .burger-menu-item span {
-    font-size: 1.18rem;
+    font-size: 1.08rem;
     font-weight: 600;
 }
 @media (max-width: 600px) {
     .burger-menu-content {
-        min-width: 90vw;
-        max-width: 98vw;
+        width: 98vw;
+        height: 90vh;
+        min-width: unset;
+        max-width: unset;
+        max-height: 98vh;
         padding: 10px 2px 10px 2px;
     }
     .burger-menu-header h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .burger-menu-item, .burger-menu-item span {
         font-size: 0.98rem;
@@ -1439,7 +1441,7 @@ body {
         max-height: 16px;
     }
 }
-/* --- Конец компактного меню --- */
+/* --- Конец центрированного меню --- */
 
 /* Animations */
 @keyframes slideInTop {
