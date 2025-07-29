@@ -1344,15 +1344,16 @@ body {
     z-index: 1000;
     transition: opacity 0.2s;
 }
+/* --- Компактное красивое центральное меню --- */
 .burger-menu-content {
     background: #232347;
-    border-radius: 24px;
+    border-radius: 20px;
     box-shadow: 0 8px 48px 0 rgba(123, 97, 255, 0.18);
-    padding: 36px 38px 32px 38px;
-    min-width: 340px;
-    max-width: 95vw;
-    min-height: 420px;
-    max-height: 90vh;
+    padding: 22px 18px 18px 18px;
+    min-width: 260px;
+    max-width: 380px;
+    min-height: 320px;
+    max-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1367,7 +1368,7 @@ body {
 }
 .burger-menu-header h3 {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 800;
     margin: 0;
     letter-spacing: 1px;
@@ -1422,22 +1423,23 @@ body {
 @media (max-width: 600px) {
     .burger-menu-content {
         min-width: 90vw;
-        padding: 18px 6px 18px 6px;
+        max-width: 98vw;
+        padding: 10px 2px 10px 2px;
     }
     .burger-menu-header h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     .burger-menu-item, .burger-menu-item span {
-        font-size: 1rem;
+        font-size: 0.98rem;
     }
     .burger-menu-item svg {
-        min-width: 18px;
-        min-height: 18px;
-        max-width: 18px;
-        max-height: 18px;
+        min-width: 16px;
+        min-height: 16px;
+        max-width: 16px;
+        max-height: 16px;
     }
 }
-/* --- Конец красивого меню --- */
+/* --- Конец компактного меню --- */
 
 /* Animations */
 @keyframes slideInTop {
