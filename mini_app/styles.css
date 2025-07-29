@@ -1349,11 +1349,10 @@ body {
     position: relative;
     background: #232347;
     border-radius: 18px;
-    box-shadow: 0 8px 48px 0 rgba(123, 97, 255, 0.18);
-    padding: 18px 16px 16px 16px;
+    box-shadow: 0 12px 48px 0 rgba(123, 97, 255, 0.22);
+    padding: 24px 20px 20px 20px;
     width: 380px;
-    height: 420px;
-    max-width: 95vw;
+    min-height: 320px;
     max-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -1363,6 +1362,10 @@ body {
     top: unset !important;
     right: unset !important;
     bottom: unset !important;
+    scrollbar-width: none;
+}
+.burger-menu-content::-webkit-scrollbar {
+    display: none;
 }
 .burger-menu-header {
     width: 100%;
@@ -1428,11 +1431,10 @@ body {
 @media (max-width: 600px) {
     .burger-menu-content {
         width: 98vw;
-        height: 90vh;
         min-width: unset;
         max-width: unset;
         max-height: 98vh;
-        padding: 10px 2px 10px 2px;
+        padding: 12px 2px 12px 2px;
     }
     .burger-menu-header h3 {
         font-size: 1rem;
