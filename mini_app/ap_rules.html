@@ -9,22 +9,19 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <button onclick="history.back()" class="btn-back">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 12H5M12 19L5 12L12 5" stroke="#7B61FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Назад
-            </button>
-            <h1>Правила Агента Поддержки</h1>
-        </header>
-
-        <!-- Content -->
-        <div class="content">
-            <div class="rules-container">
-                <!-- Section 1: Общее положение -->
+    <div class="ap-header">
+        <button onclick="history.back()" class="ap-btn-back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M12 19L5 12L12 5" stroke="#7B61FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Назад</span>
+        </button>
+        <h1 class="ap-title">Правила Агента Поддержки</h1>
+    </div>
+    <div class="ap-rules-main">
+        <div class="ap-rules-columns">
+            <div class="ap-rules-col">
+                <!-- Секция 1 -->
                 <section class="rule-section">
                     <h2 class="section-title">1. Общее положение</h2>
                     <div class="rule-list">
@@ -70,8 +67,7 @@
                         </div>
                     </div>
                 </section>
-
-                <!-- Section 2: Агент Поддержки обязан -->
+                <!-- Секция 2 -->
                 <section class="rule-section">
                     <h2 class="section-title">2. Агент Поддержки обязан</h2>
                     <div class="rule-list">
@@ -111,8 +107,9 @@
                         </div>
                     </div>
                 </section>
-
-                <!-- Section 3: Игровому помощнику разрешается -->
+            </div>
+            <div class="ap-rules-col">
+                <!-- Секция 3 -->
                 <section class="rule-section">
                     <h2 class="section-title">3. Игровому помощнику разрешается</h2>
                     <div class="rule-list">
@@ -170,8 +167,9 @@
                         </div>
                     </div>
                 </section>
-
-                <!-- Section 4: Игровому помощнику запрещается -->
+            </div>
+            <div class="ap-rules-col">
+                <!-- Секция 4 -->
                 <section class="rule-section">
                     <h2 class="section-title">4. Игровому помощнику запрещается</h2>
                     <div class="rule-list">
