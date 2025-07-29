@@ -48,7 +48,7 @@
                         ${category}
                     </div>
                     <div class="gps-locations">
-                        ${locations.map(location => `<div class="gps-location" onclick="copyToClipboard('${location}')">${location}</div>`).join('')}
+                        ${locations.map(location => `<div class="gps-location" onclick="copyToClipboard('${category.replace(/'/g, "\\'")}', '${location.replace(/'/g, "\\'")}')">${location}</div>`).join('')}
                     </div>
                 `;
                 list.appendChild(card);
@@ -59,26 +59,27 @@
             document.getElementById('gpsList').innerHTML = '<div style="color: #ff6b6b; text-align: center; padding: 40px;">Ошибка загрузки данных</div>';
         });
     
-    function copyToClipboard(text) {
+    function copyToClipboard(category, location) {
+        const text = `/gps - ${category} - ${location}`;
         if (navigator.clipboard) {
             navigator.clipboard.writeText(text).then(() => {
-                showNotification(`Локация "${text}" скопирована!`);
+                showNotification(`Локация \"${location}\" скопирована!`);
             }).catch(() => {
-                fallbackCopyToClipboard(text);
+                fallbackCopyToClipboard(text, location);
             });
         } else {
-            fallbackCopyToClipboard(text);
+            fallbackCopyToClipboard(text, location);
         }
     }
     
-    function fallbackCopyToClipboard(text) {
+    function fallbackCopyToClipboard(text, location) {
         const textArea = document.createElement('textarea');
         textArea.value = text;
         document.body.appendChild(textArea);
         textArea.select();
         try {
             document.execCommand('copy');
-            showNotification(`Локация "${text}" скопирована!`);
+            showNotification(`Локация \"${location}\" скопирована!`);
         } catch (err) {
             showNotification('Ошибка копирования');
         }
