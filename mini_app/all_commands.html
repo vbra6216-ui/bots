@@ -67,8 +67,8 @@
                         <h4 class="command-category-title">${category}</h4>
                         <div class="commands-grid">
                             ${categoryCommands.map(cmd => `
-                                <div class="command-item">
-                                    <div class="command-name" data-command="${cmd.command.replace(/"/g, '&quot;')}">${cmd.command}</div>
+                                <div class="command-item" data-command="${cmd.command.replace(/"/g, '&quot;')}">
+                                    <div class="command-name">${cmd.command}</div>
                                     <div class="command-desc">${cmd.description}</div>
                                 </div>
                             `).join('')}
@@ -78,8 +78,8 @@
                 
                 commandsList.innerHTML = html;
                 
-                // Добавляем обработчики копирования
-                commandsList.querySelectorAll('.command-name').forEach(el => {
+                // Добавляем обработчики копирования на всю карточку
+                commandsList.querySelectorAll('.command-item').forEach(el => {
                     el.addEventListener('click', function() {
                         copyCommandToClipboard(this.dataset.command);
                     });
